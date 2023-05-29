@@ -1,0 +1,8 @@
+
+
+<div *ngIf="toDisplay">
+    <input type="text" name="title" placeholder="title" [(ngModel)]="newPost.title">
+    <input type="text" name="thought" placeholder="thought" [(ngModel)]="newPost.thought">
+</div>
+<button *ngIf="!toDisplay" (click)="toDisplay = !toDisplay">Show form</button>
+<button *ngIf="toDisplay" (click)="addPost()" (click)="toDisplay = !toDisplay">Add a new post</button>

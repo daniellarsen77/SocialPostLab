@@ -1,0 +1,5 @@
+<div class="postBox" *ngFor="let p of posts; let i = index">
+    <app-single-post [post] = "p"></app-single-post>
+</div>
+
+<app-post-form (submitted)="newPost($event)"></app-post-form>
